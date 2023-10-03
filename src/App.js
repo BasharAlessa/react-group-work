@@ -21,6 +21,7 @@ function App() {
             <BrowserRouter>
      <div>
       <Routes>
+        
         <Route path='/home' element = {<Home />} />
         <Route path='/about' element = {<About />} />
         <Route path='/post/addnew' element = {<AddNew />} />
@@ -29,12 +30,12 @@ function App() {
       </Routes>
      </div>
      </BrowserRouter>
-      <NavBar />
+      {/* <NavBar />
       <Banner />
       <Skills />
       <Projects />
       <Contact />
-      <Footer />
+      <Footer /> */}
 
     </div>
   );

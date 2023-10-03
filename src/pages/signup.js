@@ -6,8 +6,8 @@ const SignUp = ()=>{
     return (
        
 <body class="body-about">
-    <button onClick={() => setClint('user')}>User</button>
-    <button onClick={() =>setClint('company')}>Company</button>
+    <button type="button" class="btn btn-light" onClick={() => setClint('user')}>User</button>
+    <button type="button" class="btn btn-light" onClick={() =>setClint('company')}>Company</button>
 
     {
         clint === 'user' &&

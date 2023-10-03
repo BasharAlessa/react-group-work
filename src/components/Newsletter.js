@@ -20,6 +20,8 @@ export const Newsletter = ({ status, message, onValidated }) => {
   const clearFields = () => {
     setEmail('');
   }
+  const [posts , setPosts] = useState(null);
+
 
   return (
       <Col lg={12}>
@@ -29,7 +31,20 @@ export const Newsletter = ({ status, message, onValidated }) => {
               <h3>In-Posts</h3>
             </Col>
             <Col md={6} xl={7}>
-              <h4>here we need to add the posts</h4>
+            <div >
+  
+  { posts?.length>0  ? 
+   posts?.map(post => 
+      <div>
+        <h2> {post.UserId.Name}</h2>
+        <h4>{post.body}</h4>
+        <h6>{post.create_at}</h6>
+      </div>
+   )
+   : <h4> no posts for today</h4>
+   }
+  
+</div>
             </Col>
           </Row>
         </div>

@@ -1,19 +1,15 @@
-
-
+import { NavBar } from '../components/NavBar';
+import {Footer} from "../components/Footer"
+import {BannerLogIn } from "../components/BannerLogIn"
 const Login = () =>{
     return (
             
-        <body class="body-about">
+        <body class="body-login">
+<NavBar />
+<BannerLogIn/>
 
-            <form class="form" action="/login" method="post">
-                <label for="Email"> Email :</label>
-                <input type="email" name="Email" required/>
-                <label for="Password"> Password :</label>
-                <input type="password" name="Password" required/>
-                <button>login</button>
-            </form>
             {/* <h3><%= err %></h3> */}
-            
+{/* <Footer/> */}
         </body>
     )
 }
