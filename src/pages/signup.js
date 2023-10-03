@@ -5,7 +5,7 @@ const SignUp = ()=>{
 
     return (
        
-<body>
+<body class="body-about">
     <button onClick={() => setClint('user')}>User</button>
     <button onClick={() =>setClint('company')}>Company</button>
 

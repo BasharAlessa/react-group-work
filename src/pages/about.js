@@ -2,7 +2,8 @@
 
 const About = () => {
     return (
-<body>
+<body class="body-about">
+
     <br/>
     <h5>Welcome to <strong>Refu'In</strong> Empowering Refugees Through Employment</h5>
     <br/>

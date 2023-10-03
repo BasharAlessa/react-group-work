@@ -3,7 +3,7 @@
 const Login = () =>{
     return (
             
-        <body>
+        <body class="body-about">
 
             <form class="form" action="/login" method="post">
                 <label for="Email"> Email :</label>

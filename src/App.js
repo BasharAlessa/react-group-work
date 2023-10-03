@@ -12,18 +12,13 @@ import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+
 // import {Home} from "./pages/home"
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Banner />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-      <BrowserRouter>
+            <BrowserRouter>
      <div>
       <Routes>
         <Route path='/home' element = {<Home />} />
@@ -34,6 +29,13 @@ function App() {
       </Routes>
      </div>
      </BrowserRouter>
+      <NavBar />
+      <Banner />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+
     </div>
   );
 }

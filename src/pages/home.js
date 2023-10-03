@@ -16,9 +16,8 @@ function Home (){
 
     return(
      <div>
-      <body>
+      <body class="body-about">
     
-      <h2>Welcome To Refu'In</h2>
     
     <div class="write-post">
         <a href="/post/addnew">
