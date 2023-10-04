@@ -1,7 +1,25 @@
 import { useState } from "react"
+import { useEffect } from "react"
+import axios from 'axios'
 
 const SignUp = ()=>{
     const [clint , setClint]=useState('')
+
+     
+  useEffect(()=>{
+     if (clint === 'user ')
+      {
+        axios.post('http://localhost:3500/signup')
+        .then (res => console.log(res))   
+        .catch (err => console.log(err))
+      } else if (clint === 'company ') 
+      {
+        axios.post('http://localhost:3500/signup-company-new')
+        .then (res => console.log(res))   
+        .catch (err => console.log(err))
+      }
+
+},[]);
 
     return (
        
@@ -46,7 +64,7 @@ const SignUp = ()=>{
 }
       {
       clint === 'company' &&
-    <form class="form" action="/signup-company-new" method="post">
+    <form class="form" action="http://localhost:3500/signup-company-new" method="post">
         <label for="Name">Company Name :</label>
         <input type="text" name="Name" required/>
         <label for="Field">Company Field :</label>

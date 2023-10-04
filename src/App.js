@@ -13,20 +13,25 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
+
+
 // import {Home} from "./pages/home"
 
 function App() {
   return (
     <div className="App">
+     
+     
             <BrowserRouter>
      <div>
       <Routes>
         
         <Route path='/home' element = {<Home />} />
+        <Route path='/logout' element = {<Home />} />
         <Route path='/about' element = {<About />} />
         <Route path='/post/addnew' element = {<AddNew />} />
-        <Route path='/login' element = {<Login />} />
-        <Route path='/signup' element = {<SignUp />} />
+        <Route path='/login' element = {!document.cookie ?  <Login /> :<Home /> }/>
+        <Route path='/signup' element = {!document.cookie ?  <SignUp /> :<Home /> } />
       </Routes>
      </div>
      </BrowserRouter>

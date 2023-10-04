@@ -6,6 +6,7 @@ import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import { HashLink } from 'react-router-hash-link';
 import {BrowserRouter as Router} from "react-router-dom";
+import axios from "axios";
 
 export const NavBar = () => {
 
@@ -25,6 +26,7 @@ export const NavBar = () => {
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
+
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
@@ -48,7 +50,7 @@ export const NavBar = () => {
               <Nav.Link href="#" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Improve In-self With Us </Nav.Link>
               <Nav.Link href="/login" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>log-In </Nav.Link>
               <Nav.Link href="/signup" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Sign-Up </Nav.Link>
-
+              <Nav.Link href="http://localhost:3500/logout" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>logout </Nav.Link>
 
             </Nav>
             <span className="navbar-text">

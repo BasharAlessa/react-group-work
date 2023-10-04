@@ -6,6 +6,7 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { HashLink } from 'react-router-hash-link';
 import {HomeTest} from "./HomeTest"
+import axios from 'axios'
 
 export const BannerLogIn = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -23,6 +24,27 @@ export const BannerLogIn = () => {
 
     return () => { clearInterval(ticker) };
   }, [text])
+  
+  const [error , setError] = useState('')
+  const [log , setLog] = useState(false)
+ 
+  useEffect(()=>{
+     if (log === true)
+    //  {axios.post('http://localhost:3500/login')
+    //  .then ( ()=> {
+    //   axios.get('http://localhost:3500/login')
+    //   .then(res => {
+    //     console.log(res.data)
+    //   })
+    //  })   
+    //  .catch (err => console.log(err))}
+
+    {axios.post('http://localhost:3500/login')
+    .then (res => setError(res.data.err))   
+    .catch (err => console.log(err))}
+},[]);
+  
+
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -65,15 +87,14 @@ export const BannerLogIn = () => {
                                   <br></br>
                                   <br></br>
 
-                                  <form class="form" action="/login" method="post">
+                                  <form class="form" action="http://localhost:3500/login" method="post">
                                       <label for="Email"> Email :</label>
                                       <input type="email" name="Email" required/>
                                       <label for="Password"> Password :</label>
                                       <input type="password" name="Password" required/>
-                                      <button type="button" class="btn btn-light">login</button>
-
-
+                                      <button onClick={() =>{ setLog(true)  }}  class="btn btn-light">login</button>
                                   </form>
+                                  <h1>{error}</h1>
                 {/* <span className="tagline">Welcome to my In-Profile</span>
                 <h1>{`Hi! i'm Jasem`} <span className="txt-rotate" dataPeriod="3000" data-rotate='[ "painter", "carpenter", "car renter" ]'><span className="wrap">{text}</span></span></h1> */}
                   {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> */}
