@@ -36,7 +36,7 @@ export const Newsletter = ({ status, message, onValidated }) => {
             <Col lg={12} md={6} xl={5}>
               <h2>Refu'IN Posts</h2>
             </Col>
-            <Col md={6} xl={7}>
+            <Col md={5} xl={7}>
             <div >
   
   { posts?.length>0  ? 

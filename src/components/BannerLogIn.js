@@ -98,6 +98,9 @@ export const BannerLogIn = () => {
                                       <input type="password" name="Password" required/>
                                       <button onClick={() =>{ setLog(true)  }}  class="btn btn-light">login</button>
                                   </form>
+                                  <br></br>
+                                  <br></br>
+                                  <button class="btn btn-light" >create a profile in here</button>
                                   <h1>{error}</h1>
                 {/* <span className="tagline">Welcome to my In-Profile</span>
                 <h1>{`Hi! i'm Jasem`} <span className="txt-rotate" dataPeriod="3000" data-rotate='[ "painter", "carpenter", "car renter" ]'><span className="wrap">{text}</span></span></h1> */}

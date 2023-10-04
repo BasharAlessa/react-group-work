@@ -21,7 +21,7 @@ const postSchema = new Schema ({
         type: Date ,
         default :Date.now,
         get:function(createAt){
-            return moment(createAt).format("DD/MM/YYYY ")
+            return moment(createAt).format('MMMM Do YYYY, h:mm:ss a')
         }
     }
 },{timestamps:true}) 

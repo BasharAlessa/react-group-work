@@ -7,6 +7,7 @@ const Login = () =>{
 <NavBar />
 <BannerLogIn/>
 
+
             {/* <h3><%= err %></h3> */}
 {/* <Footer/> */}
         </div>
