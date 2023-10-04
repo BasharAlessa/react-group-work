@@ -5,15 +5,6 @@ import { NavBar } from '../components/NavBar';
 
 
 export function HomeTest (){
-    const [posts , setPosts] = useState(null);
-    
-  useEffect(()=>{
-    axios.get('http://localhost:3500/home')
-   .then (res => {
-          setPosts(res.data)  
-    })   
-   .catch (err => console.log(err))
-},[posts]);
 
     return(
      <div>
