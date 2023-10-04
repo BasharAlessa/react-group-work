@@ -45,7 +45,9 @@ const SignUp = ()=>{
         <label for="Bio"> Tell us more about your self :</label>
         <input type="text" name="Bio"  placeholder="Bio"  />
         <h2>Working Skills Checklist</h2>
-        <div>
+
+      
+
             <label for="skill1"><input type="checkbox" id="skill1"/> HTML Structure</label><br/>
             <label for="skill2"><input type="checkbox" id="skill2"/> Semantic HTML</label><br/>
             <label for="skill3"><input type="checkbox" id="skill3"/> HTML Forms</label><br/>
@@ -56,7 +58,9 @@ const SignUp = ()=>{
             <label for="skill8"><input type="checkbox" id="skill8"/> JavaScript Fundamentals</label><br/>
             <label for="skill9"><input type="checkbox" id="skill9"/> Version Control (e.g., Git)</label><br/>
             <label for="skill10"><input type="checkbox" id="skill10"/> Web Accessibility</label><br/>
-        </div>
+
+      
+
 
 
         <button>Sign up</button>
