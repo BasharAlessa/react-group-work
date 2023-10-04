@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
-import axios from "axios";
 
 export const Newsletter = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState('');
@@ -8,13 +7,6 @@ export const Newsletter = ({ status, message, onValidated }) => {
   useEffect(() => {
     if (status === 'success') clearFields();
   }, [status])
-
-   
-  useEffect(()=>{
-    axios.get('http://localhost:3500/home')
-   .then (res => {setPosts(res.data)})   
-   .catch (err => console.log(err))
-   },[]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +28,7 @@ export const Newsletter = ({ status, message, onValidated }) => {
         <div className="newsletter-bx wow slideInUp">
           <Row>
             <Col lg={12} md={6} xl={5}>
-              <h3>In-Posts</h3>
+              <h2>Refu'IN Posts</h2>
             </Col>
             <Col md={6} xl={7}>
             <div >

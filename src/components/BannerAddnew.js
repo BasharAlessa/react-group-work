@@ -10,7 +10,7 @@ import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-export const BannerLogIn = () => {
+export const BannerAddnew = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
@@ -91,14 +91,17 @@ export const BannerLogIn = () => {
           {/* event submit  */}
           {/* to delete action  and method  */}
           
-                                  <form class="form" action="http://localhost:3500/login" method="post">
-                                      <label for="Email"> Email :</label>
-                                      <input type="email" name="Email" required/>
-                                      <label for="Password"> Password :</label>
-                                      <input type="password" name="Password" required/>
-                                      <button onClick={() =>{ setLog(true)  }}  class="btn btn-light">login</button>
-                                  </form>
-                                  <h1>{error}</h1>
+
+
+         <h4>Here you can add new post</h4> 
+        
+        <form  class="form" action="http://localhost:3500/addPost" method="post">
+            <label for="body" >Post :</label>
+            <textarea class="form"name="form"></textarea>
+            <button class="btn-submit">Add Post</button>
+        </form>
+
+
                 {/* <span className="tagline">Welcome to my In-Profile</span>
                 <h1>{`Hi! i'm Jasem`} <span className="txt-rotate" dataPeriod="3000" data-rotate='[ "painter", "carpenter", "car renter" ]'><span className="wrap">{text}</span></span></h1> */}
                   {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> */}

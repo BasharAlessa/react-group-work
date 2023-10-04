@@ -1,28 +1,29 @@
-import './App.css';
+import '../App.css';
+
 import {BrowserRouter , Routes , Route } from 'react-router-dom'
-import Home from './pages/home'
-import About from './pages/about'
-import AddNew from './pages/addNew'
-import Login from './pages/login'
-import SignUp from './pages/signup'
+import Home from './home'
+import About from './about'
+import AddNew from './addNew'
+import Login from './login'
+import SignUp from './signup'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavBar } from "./components/NavBar";
-import { Banner } from "./components/Banner";
-import { Skills } from "./components/Skills";
-import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
-import  AppReact from "./pages/homeReact";
+import { NavBar } from "../components/NavBar";
+import { Banner } from "../components/Banner";
+import { Skills } from "../components/Skills";
+import { Projects } from "../components/Projects";
+import { Contact } from "../components/Contact";
+import { Footer } from "../components/Footer";
+
 
 
 // import {Home} from "./pages/home"
 
-function App() {
+function AppReact() {
   return (
     <div className="App">
      
      
-            <BrowserRouter>
+            {/* <BrowserRouter>
      <div>
       <Routes>
         
@@ -32,23 +33,20 @@ function App() {
         <Route path='/post/addnew' element = {<AddNew />} />
         <Route path='/login' element = {!document.cookie ?  <Login /> :<Home /> }/>
         <Route path='/signup' element = {!document.cookie ?  <SignUp /> :<Home /> } />
-        <Route path='/' element = {<AppReact />} />
-
-
-
+        <Route path='/reacthome' element = {<Home />} />
 
       </Routes>
      </div>
-     </BrowserRouter>
-      {/* <NavBar />
+     </BrowserRouter> */}
+      <NavBar />
       <Banner />
       <Skills />
       <Projects />
-      <Contact />
-      <Footer /> */}
+      {/* <Contact /> */}
+      <Footer />
 
     </div>
   );
 }
 
-export default App;
+export default AppReact;

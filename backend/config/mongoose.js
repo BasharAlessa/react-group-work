@@ -6,4 +6,8 @@ mongoose.connect("mongodb+srv://ahd:JnZoTn5lLZpOSWNa@cluster0.eh9taen.mongodb.ne
         })
         .catch((err)=>{
             console.log(err);
+
+            
         })
+
+        // mongodb+srv://essa:essa@cluster0.ojodwkh.mongodb.net/?retryWrites=true&w=majority

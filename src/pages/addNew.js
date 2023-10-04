@@ -1,5 +1,11 @@
 import { useEffect } from "react"
 import axios from "axios";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../App.css';
+import { NavBar } from '../components/NavBar';
+import {BannerAddnew} from "../components/BannerAddnew"
+
+
 
 const AddNew = ()=>{
     
@@ -9,15 +15,10 @@ const AddNew = ()=>{
        .catch (err => console.log(err))
 },[]);
     return (
-        <body>
+        <body class="jasem-style">
 
-         <h4>Here you can add new post</h4> 
-        
-        <form class="form" action="http://localhost:3500/addPost" method="post">
-            <label for="body" >Post :</label>
-            <textarea name="body"></textarea>
-            <button>Add Post</button>
-        </form>
+<NavBar/>
+<BannerAddnew/>
 
         </body>
  )}

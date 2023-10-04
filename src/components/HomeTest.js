@@ -20,7 +20,7 @@ export function HomeTest (){
                 
             </div>
             <br></br>
-         <input type="text" class="post-input" placeholder="write your post in here" /> 📝</a>
+         <input type="text" class="form" placeholder="write your post in here" /> </a>
 
     </div>
     
