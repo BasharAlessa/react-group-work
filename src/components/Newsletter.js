@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
+import axios from "axios";
 
 export const Newsletter = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState('');
@@ -22,6 +23,11 @@ export const Newsletter = ({ status, message, onValidated }) => {
   }
   const [posts , setPosts] = useState(null);
 
+  useEffect(()=>{
+   axios.get('http://localhost:3500/home')
+   .then (res => setPosts(res.data))   
+   .catch (err => console.log(err))
+},[]);
 
   return (
       <Col lg={12}>
