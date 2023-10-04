@@ -13,7 +13,7 @@ export function HomeTest (){
     
     
     <div class="write-post">
-    <h3>If you are <strong>IN</strong> start the journey In-Posting ✍️</h3>
+    <h3>If you are <strong>IN</strong> start the journey In-Posting </h3>
 
         <a href="/post/addnew">
             <div class="In-Posting">
