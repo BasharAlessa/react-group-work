@@ -41,7 +41,7 @@ const creatPost = (req,res)=>{
                 user.post.push(post._id)
                 user.save()
                  .then(()=>{
-                    res.redirect('/home')
+                    res.redirect('http://localhost:3000/home')
                  })
                  .catch((err)=>{
                     console.log(err)
