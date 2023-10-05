@@ -768,3 +768,21 @@ margin: 20px 10px;
   border: none;
   padding: 10px;
 }
+.mission-style{
+  margin-left: 400px;
+}
+.about-img{
+  width: 500px;
+  margin: 20px;
+}
+.about-start{
+  display: flex;
+  flex-direction: row;
+}
+.about-page{
+  margin: 0 10px;
+}
+.vision-stule{
+  margin-left: 200px;
+
+}
