@@ -769,11 +769,13 @@ margin: 20px 10px;
   padding: 10px;
 }
 .mission-style{
-  margin-left: 400px;
+  display: flex;
+  margin: 20px 20px;
 }
 .about-img{
   width: 500px;
   margin: 20px;
+  border-radius: 10px;
 }
 .about-start{
   display: flex;
@@ -783,6 +785,14 @@ margin: 20px 10px;
   margin: 0 10px;
 }
 .vision-stule{
-  margin-left: 200px;
+  /* margin-left: 200px; */
 
+}
+.about-img-bridge{
+  width: 200px;
+  border-radius: 25px;
+}
+.mv-style{
+  display: flex;
+  flex-direction: row;
 }

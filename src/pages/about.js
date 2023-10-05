@@ -3,7 +3,9 @@ import {Footer} from "../components/Footer"
 import {BannerAbout } from "../components/BannerAbout"
 import { JasemFooter } from '../components/jasemFooter ';
 import firstpic from "../assets/img/firstpic.jpg"
-
+import thirdone from "../assets/img/thirdone.jpg"
+import bridge from "../assets/img/bridge.jpg"
+import succ from "../assets/img/succ.webp"
 
 
 const About = () => {
@@ -17,28 +19,37 @@ const About = () => {
 <br></br>
 <br></br>
 <br></br>
-<h5>Welcome to <strong>Refu'In</strong> Empowering Refugees Through Employment</h5>
     <br/>
     <div class ="about-start">
     <img class="about-img" src={firstpic} alt="pic"/>
     
-    <p><br></br>
-<br></br><br></br>
-<br></br>At <strong>Refu'In</strong>, we believe in the power of opportunity and the resilience of the human spirit. <br></br>We understand that seeking refuge in a new land can be a daunting journey, filled with challenges and uncertainties. 
+    <p class="about-story"><br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+At <strong>Refu'In</strong>, 
+
+        <br></br>
+        <br></br>
+        we believe in the power of opportunity and the resilience of the human spirit. <br></br>We understand that seeking refuge in a new land can be a daunting journey, filled with challenges and uncertainties. 
         <br></br>But we also know that refugees bring incredible skills, talents, and a strong work ethic to their new communities.</p>
-    
+        <img class="about-img" src={thirdone } alt="pic"/>
+
 
     </div>
     <br/>
-    <div class="m&v-style">
+
+    <div class="mv-style">
     <div class="mission-style">
-    <h6>Our Mission</h6>
-    <p>o bridge the gap between refugees seeking a fresh start and employers eager to tap into a diverse and talented workforce. We envision a world where every refugee has the chance to rebuild their life, contribute their unique abilities, and thrive in their new homeland.</p>
+
+    <p>Our Mission: bridge the gap between refugees seeking a fresh start and employers eager to tap into a diverse and talented workforce. We envision a world where every refugee has the chance to rebuild their life, contribute their unique abilities, and thrive in their new homeland.</p>
+    <img class="about-img-bridge" src={bridge } alt="pic"/>
 
     </div>
-    <div class="vision-stule">
-    <h6>Our Vision</h6>
-    <p>We envision a world where every refugee has the chance to rebuild their life, contribute their unique abilities, and thrive in their new homeland. We see a future where borders are not barriers to success, and where diversity is not just celebrated but embraced as a catalyst for growth.</p>
+    <div class="mission-style">
+
+    <p>Our Vision:We envision a world where every refugee has the chance to rebuild their life, contribute their unique abilities, and thrive in their new homeland. We see a future where borders are not barriers to success, and where diversity is not just celebrated but embraced as a catalyst for growth.</p>
+    <img class="about-img-bridge" src={succ } alt="pic"/>
 
     </div>
 
