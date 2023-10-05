@@ -63,9 +63,10 @@ const postDisplay = (req,res)=>{
     .sort({create_at :-1})
     .then(data =>{
       //  console.log(data);
-        res.render("PostDisplay",{
-            posts:data , comments:data.comment
-        })
+        // res.render("PostDisplay",{
+        //     posts:data , comments:data.comment
+        // })
+        res.send(data)
     })
     .catch(err=>{
         console.log(err);

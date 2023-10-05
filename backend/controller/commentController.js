@@ -16,7 +16,7 @@ const creatComment = (req,res)=>{
              res.companyId = decodedcompany.tokenData.id
         }  
     } ) 
-
+     console.log(req)
     const comment = new commentmModel({
         body: req.body.comment,
         PostId:req.params.id,
@@ -34,7 +34,7 @@ const creatComment = (req,res)=>{
                     comp.comment.push(comment._id)
                     comp.save()
                     .then(()=>{
-                        res.redirect('/home')
+                        // res.redirect('/home')
                     })
                     .catch((err)=>{
                         console.log(err)

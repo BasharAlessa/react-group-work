@@ -16,7 +16,7 @@ const CommentSchema = new Schema ({
     CompanyId:{
         type:mongoose.Types.ObjectId,
         ref:'Companies',
-        required:true
+        // required:true
     },
     created_at:{
         type: Date ,

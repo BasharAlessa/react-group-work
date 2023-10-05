@@ -6,6 +6,12 @@ import { NavBar } from '../components/NavBar';
 
 export function HomeTest (){
 
+    useEffect(()=>{
+        axios.post('http://localhost:3500/addPost')
+        .then (res => console.log(res))   
+        .catch (err => console.log(err))
+         },[]);
+         
     return(
      <div>
 
@@ -26,7 +32,7 @@ export function HomeTest (){
         
         <form  class="form" action="http://localhost:3500/addPost" method="post">
 
-            <textarea class="form"name="form"></textarea>
+            <textarea class="form"name="body"></textarea>
             <button class="btn-submit">Add Post</button>
         </form>
     </div>

@@ -5,6 +5,7 @@ import About from './pages/about'
 import AddNew from './pages/addNew'
 import Login from './pages/login'
 import SignUp from './pages/signup'
+import PostDisplay from './pages/post'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner";
@@ -33,6 +34,7 @@ function App() {
         <Route path='/login' element = {!document.cookie ?  <Login /> :<Home /> }/>
         <Route path='/signup' element = {!document.cookie ?  <SignUp /> :<Home /> } />
         <Route path='/' element = {<AppReact />} />
+        <Route path='/post/:id' element = {<PostDisplay />} />
 
 
 

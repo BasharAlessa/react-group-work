@@ -7,7 +7,7 @@ const comapnyController= require("../controller/companyController")
 
 route.get('/', (req,res)=>{res.redirect('/home')})
 route.get("/home" , postController.homePage)
-route.get("/post/:id" ,comapnyController.companyAuth, postController.postDisplay)
+route.get("/post/:id" , postController.postDisplay)
 route.get('/info', (req,res)=>{res.render('userInfo')})
 route.get('/logout',userController.logout)
 
@@ -16,7 +16,7 @@ route.get('/logout',userController.logout)
 route.post("/signup", userController.signupUser)
 route.post("/login", userController.logInUser)
 route.post("/addPost", postController.creatPost)
-route.post("/addComment/:id",commentController.commentAuth, commentController.creatComment)
+route.post("/addComment/:id", commentController.creatComment)
 route.post("/signup-company-new", comapnyController.signupCompnay)
 
 

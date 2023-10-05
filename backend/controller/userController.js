@@ -23,6 +23,7 @@ const signupUser =(req,res)=>{
 
  
 const logInUser = (req,res)=>{                      // for both users and companies
+    console.log(req.body)
     Users.findOne({Email:req.body.Email})
       .then(user => {
         if(user !== null){
@@ -36,7 +37,8 @@ const logInUser = (req,res)=>{                      // for both users and compan
                 }
                 let userToken=jwt.sign({tokenData},'this is a random text for jwt sign')
                 res.cookie('jwt', userToken)
-                res.redirect('http://localhost:3000/home')
+                // res.redirect('http://localhost:3000/home')
+                res.send({userToken,tokenData})
             }
             else{
                 res.send({err: 'password is not correct'})
@@ -57,7 +59,8 @@ const logInUser = (req,res)=>{                      // for both users and compan
                         }
                         let companyToken=jwt.sign({tokenData},'this is a random text for jwt sign')
                         res.cookie('jwtc', companyToken)
-                        res.redirect('http://localhost:3000/home')
+                        // res.redirect('http://localhost:3000/home')
+                        res.send({companyToken,tokenData})
                     }else{
                         res.send({err: 'password is not correct'})
                     }

@@ -36,7 +36,7 @@ export const Newsletter = ({ status, message, onValidated }) => {
             <Col lg={12} md={6} xl={5}>
               <h2>Refu'IN Posts</h2>
             </Col>
-            <Col md={5} xl={7}>
+            <Col md={6} xl={7}>
             <div >
   
   { posts?.length>0  ? 
@@ -45,6 +45,7 @@ export const Newsletter = ({ status, message, onValidated }) => {
         <h2> {post.UserId.Name}</h2>
         <h4>{post.body}</h4>
         <h6>{post.create_at}</h6>
+        <a href={`/post/${post._id}`}> add comment</a>
       </div>
    )
    : <h4> no posts for today</h4>
