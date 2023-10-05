@@ -2,7 +2,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
+import NavBar from "../components/NavBar";
+import { JasemFooter } from "../components/jasemFooter ";
 
 const PostDisplay = ()=>{
     
@@ -25,19 +26,25 @@ useEffect(()=>{
 
 
     return(
-<body>  
+
+<div>  
+<NavBar/>
+
   {  posts &&
-      <div>
-        <h2> {posts.UserId.Name}</h2>
-        <h4>{posts.body}</h4>
-        <h6>{posts.create_at}</h6>
+      <div class="post-style">
+        <h2 class="post-name"> {posts.UserId.Name}</h2>
+        <h4 class="post-body">{posts.body}</h4>
+        <h6 class="post-date">{posts.create_at}</h6>
         
          <form action={`http://localhost:3500/addComment/${params.id}`} method="post">
-             <input type="text" name="body"/>
+             <input class="login-form"type="text" name="body"/>
              <button >Add Comment</button>
           </form>
        </div>
-    }  
-</body>
+  } 
+<JasemFooter></JasemFooter> 
+
+</div>
+
 )}
 export default PostDisplay

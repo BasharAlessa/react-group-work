@@ -632,6 +632,11 @@ jasem-style
   font-weight: 400;
   height: 100%;
   transition: all .2s ease;
+  /* display: flex;
+  flex-direction: column; */
+  /* text-align: left; */
+  border-radius: 30px;
+  padding: 30px;
 }
 .form:hover{
   box-shadow: 0 0 0 0 #fff inset, #1de9b6 0 0 0 2px;
@@ -672,4 +677,94 @@ jasem-style
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.post-form{
+  background-image: linear-gradient(45deg,#AA367C,#9147ff);
+  color: #000;
+  width: 100%;
+  border-radius: 10px;
+  margin: 30px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  height: auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.post-form a{
+  text-decoration: none;
+  color: #abacaf;
+}
+
+.post-view{
+  background-color: #1de9b6;
+}
+.login-form{
+  color: #abacaf;
+  margin: 0 10px;
+}
+.login-text{
+  margin: 40px 0 ;
+}
+.input-text-login{
+  padding: 2px 5px ;
+  border-radius: 4px;
+}
+.btn-success{
+  margin: 40px;
+}
+.timing{
+  font-size: small;
+}
+.post-style{
+  background-image: linear-gradient(45deg,#AA367C,#9147ff);
+  color: #000;
+  border-radius: 10px;
+  margin: 200px 30px;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  height: auto;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+.post-name{
+  margin-right: 200px;
+}
+.post-body{
+  margin-right: 200px;
+
+}
+.body-login{
+  margin-bottom: 150px;
+}
+.body-about{
+  margin: 20% 20%;
+  background-image: linear-gradient(45deg,#AA367C,#9147ff);
+  color: #000;
+  border-radius: 10px;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: auto;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+.user-style input{
+margin: 20px 10px;
+}
+.btn-signup{
+  display: flex;
+  justify-content: space-around;
+}
+.input-bio{
+  height: 100px;
+  width: 400px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
 }

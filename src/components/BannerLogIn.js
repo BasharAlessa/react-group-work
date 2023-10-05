@@ -76,19 +76,23 @@ export const BannerLogIn = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                   <br></br>
                                   <br></br>
-                                  <br></br>
-                                  <br></br>
-                                  <br></br>
-                                  <br></br>
-                                  <br></br>
+
         
                                       <form class="form" action="http://localhost:3500/login" method="Post" >
-                                      <label for="Email"> Email :</label>
-                                      <input type="email" name="Email" onChange={(e)=> {setEmail(e.target.value) ; e.preventDefault()}} required/>
-                                      <label for="Password"> Password :</label>
-                                      <input type="password" name="Password" onChange={(e)=> setPassword(e.target.value)} required/>
-                                      <button onClick={handelSubmitLogin}  class="btn btn-light">login</button>
+                                        <div class="login-text">
+                                            <label class="login-form" for="Email"> Email :</label>
+                                            <input class="input-text-login" type="email" name="Email" onChange={(e)=> {setEmail(e.target.value) ; e.preventDefault()}} required/>
+                                            <label class="login-form" for="Password"> Password :</label>
+                                            <input class="input-text-login" type="password" name="Password" onChange={(e)=> setPassword(e.target.value)} required/>
+
+                                        </div>
+                                            <button onClick={handelSubmitLogin}  class="btn btn-light">login</button>
                                       </form>
+                                      <div>
+                                      <a href="/signup" class="btn btn-success">Create New Account</a>
+
+                                      </div>
+
                                       <h1>{error}</h1> 
 
                 {/* <span className="tagline">Welcome to my In-Profile</span>

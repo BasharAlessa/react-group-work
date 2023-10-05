@@ -28,12 +28,12 @@ export function HomeTest (){
             <br></br>
          <input type="text" class="form" placeholder="write your post in here" /> </a> */}
 
-        <h3>If you are <strong>IN</strong> start the journey In-Posting </h3>
+        <h3>If you are <strong>IN</strong> start the journey with</h3>
         
         <form  class="form" action="http://localhost:3500/addPost" method="post">
 
             <textarea class="form"name="body"></textarea>
-            <button class="btn-submit">Add Post</button>
+            <button class="btn-submit">Add Your Words</button>
         </form>
     </div>
     

@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { useEffect } from "react"
 import axios from 'axios'
-
+import NavBar from "../components/NavBar"
+import { JasemFooter } from "../components/jasemFooter "
 const SignUp = ()=>{
     const [clint , setClint]=useState('')
 
@@ -22,28 +23,39 @@ const SignUp = ()=>{
 },[]);
 
     return (
-       
-<body class="body-about">
-    <button type="button" class="btn btn-light" onClick={() => setClint('user')}>User</button>
+
+<body>
+
+<NavBar>
+        
+        </NavBar>
+        <div class="body-about">
+            <div class="btn-signup">
+            <button type="button" class="btn btn-light" onClick={() => setClint('user')}>User</button>
     <button type="button" class="btn btn-light" onClick={() =>setClint('company')}>Company</button>
 
-    {
+            </div>
+            <div class="user-style">
+            {
         clint === 'user' &&
     <form class="form" action="http://localhost:3500/signup" method="post">
         <label for="Name">User Name :</label>
         <input type="text" name="Name" required/>
         <label for="Email"> Email :</label>
         <input type="email" name="Email" required/>
+        <br></br>
+
         <label for="Linkedin"> Linkedin :</label>
         <input type="text" name="Linkedin" />
         <label for="Facebook"> Facebook :</label>
         <input type="text" name="Facebook" />
+        <br></br>
         <label for="Instagram"> Instagram :</label>
         <input type="text" name="Instagram" />
         <label for="Password"> Password :</label>
         <input type="password" name="Password" />
         <label for="Bio"> Tell us more about your self :</label>
-        <input type="text" name="Bio"  placeholder="Bio"  />
+        <input class="input-bio"type="text" name="Bio"  placeholder="Bio"  />
         <h2>Working Skills Checklist</h2>
 
       
@@ -63,7 +75,7 @@ const SignUp = ()=>{
 
 
 
-        <button>Sign up</button>
+        <button class="btn btn-light">Sign up</button>
     </form>
 }
       {
@@ -73,13 +85,22 @@ const SignUp = ()=>{
         <input type="text" name="Name" required/>
         <label for="Field">Company Field :</label>
         <input type="text" name="Field" required/>
+        <br></br>
         <label for="Email"> Email :</label>
         <input type="email" name="Email" required/>
         <label for="Password"> Password :</label>
         <input type="password" name="Password" required/>
-        <button>Sign up</button>
+        <br></br>
+        <button class="btn btn-light">Sign up</button>
     </form>
     }
+            </div>
+   
+        </div>
+
+    <JasemFooter>
+        
+    </JasemFooter>
 </body>
     )
 }
