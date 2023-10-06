@@ -89,6 +89,8 @@ export const BannerLogIn = () => {
                                             <button onClick={handelSubmitLogin}  class="btn btn-light">login</button>
                                       </form>
                                       <div>
+                                        <br></br>
+                                        <h4>Or</h4>
                                       <a href="/signup" class="btn btn-success">Create New Account</a>
 
                                       </div>
