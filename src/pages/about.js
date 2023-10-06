@@ -59,6 +59,7 @@ At <strong>Refu'In</strong>,
 
     <h6>Our Goals</h6>
     <p><ul>
+        <br></br>
         <li>Connect Refugees with Meaningful Employment: Our primary goal is to connect refugees with job opportunities that match their skills and aspirations. We aim to facilitate the integration of refugees into the workforce, enabling them to regain their independence and self-sufficiency.</li>
         <div class="about-goal">
             <div>
