@@ -51,7 +51,7 @@ const deleteHandler = (e) =>{
       <div class="post-style">
         
         <div>
-        <h2 class="post-name">👦_ {posts.UserId.Name}</h2>
+        <h2 class="post-name">👦_ {posts.UserId.Name} : </h2>
 
         </div>
         <div class="main-post">
