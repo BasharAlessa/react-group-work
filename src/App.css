@@ -812,12 +812,13 @@ margin: 20px 10px;
   background-color:#9c9da1;
   width: 28%;
   margin-left: 70%;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 10px;
   box-shadow: 10px 10px 5px;
   height: auto;
   text-align:left;
   margin-top: 14px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
 
 }
 
