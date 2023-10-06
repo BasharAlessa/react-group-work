@@ -789,6 +789,7 @@ margin: 20px 10px;
   margin: 20px;
   border-radius: 10px;
 }
+
 .about-start{
   display: flex;
   flex-direction: row;
@@ -800,9 +801,26 @@ margin: 20px 10px;
   /* margin-left: 200px; */
 
 }
+.about-img-2{
+  width: 500px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.about-img-2:hover{
+  transform: scale(1.2);
+  z-index: 1;
+  transition: 3s all ease;
+}
 .about-img-bridge{
   width: 200px;
-  border-radius: 25px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 1s all ease;
+
+}
+.about-img-bridge:hover{
+  transform: scale(1.1);
+  z-index: 1;
 }
 .mv-style{
   display: flex;
@@ -877,4 +895,15 @@ margin: 20px 10px;
   border-radius: 4px;
   margin-top: 20%;
   
+}
+.about-goal{
+  display: flex;
+  justify-content: center;
+
+}
+.about-goal li{
+margin-top: 30px
+}
+.about-img-goal {
+  width: 300px;
 }
