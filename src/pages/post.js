@@ -57,7 +57,7 @@ const deleteHandler = (e) =>{
         <div class="main-post">
         <h4 class="post-body">{posts.body}</h4>
         <div class="date-delete">
-        <h6  class="post-date">{moment(posts.create_at).format('MMMM Do YYYY, h:mm:ss ')}</h6>
+        <h6  class="post-date">{moment(posts.create_at).format('MMMM Do YYYY, h:mm ')}</h6>
         <button class="btn btn-danger"  onClick={(e) => deleteHandler(e)}>Delete</button>
 
         </div>

@@ -830,7 +830,7 @@ margin: 20px 10px;
 .date-delete{
   display: flex;
   flex-direction: row;
-  padding: 0 400px;
+  padding: 0 250px;
   margin-top: 20px;
 }
 .btn-danger{

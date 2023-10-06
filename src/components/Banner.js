@@ -59,7 +59,7 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to Refu'IN</span>
                 <h1>{`Where`} <span className="txt-rotate" dataPeriod="3000" data-rotate='[ "painter", "carpenter", "car renter" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>bridge the gap between refugees seeking a fresh start and employers eager to tap into a diverse and talented workforce. We envision a world where every refugee has the chance to rebuild their life, contribute their unique abilities, and thrive in their new homeland.</p>
+                  <p>Bridge the gap between refugees seeking a fresh start and employers eager to tap into a diverse and talented workforce. We envision a world where every refugee has the chance to rebuild their life, contribute their unique abilities, and thrive in their new homeland.</p>
                   {/* <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button> */}
 
               </div>}
