@@ -704,6 +704,9 @@ jasem-style
 .login-form{
   color: #abacaf;
   margin: 0 10px;
+  border-radius: 5px;
+  padding: 3px;
+  height: auto;
 }
 .login-text{
   margin: 40px 0 ;
@@ -724,18 +727,26 @@ jasem-style
   border-radius: 10px;
   margin: 200px 30px;
   padding: 100px 20px;
-  display: flex;
-  flex-direction: row;
+  /* display: flex; */
+  /* flex-direction: row; */
   justify-content: space-between;
-  text-align: center;
+  /* text-align: center; */
   height: auto;
   font-family:Georgia, 'Times New Roman', Times, serif
 }
 .post-name{
-  margin-right: 200px;
+  /* margin-right: 200px; */
+  text-shadow: 2px 2px 4px #000000;
 }
 .post-body{
-  margin-right: 200px;
+  background-color:#ccc;
+  width: 500px;
+  margin-left: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px;
+  height: auto;
+  text-align: center;
 
 }
 .body-login{
@@ -795,4 +806,73 @@ margin: 20px 10px;
 .mv-style{
   display: flex;
   flex-direction: row;
+}
+.comment-style{
+  background-color:#9c9da1;
+  width: 28%;
+  margin-left: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px;
+  height: auto;
+  text-align:left;
+  margin-top: 14px;
+
+}
+
+.post-date{
+  /* margin-left: 30%; */
+  margin-top: 5px;
+  margin-right: 10px;
+
+}
+.date-delete{
+  display: flex;
+  flex-direction: row;
+  padding: 0 400px;
+  margin-top: 20px;
+}
+.btn-danger{
+  height: 32px;
+
+  
+}
+.comment-input{
+  background-color:#9c9da1;
+  width: 23%;
+  margin-left: 70%;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px;
+  height: auto;
+  text-align:left;
+  margin-top: 14px;
+
+
+
+}
+.comment-form{
+  display: flex;
+  flex-direction: row;
+}
+.post-name-user{
+  /* width: 500px; */
+  font-size: 15px;
+  margin-top: 40px;
+
+}
+.post-body-user{
+  width: 350px;
+  text-align: left;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+.post-btn{
+  background-color: #485bad;
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-top: 20%;
+  
 }

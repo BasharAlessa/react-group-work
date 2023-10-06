@@ -46,7 +46,7 @@ export const NavBar = () => {
             <Nav className="ms-auto">
               <Nav.Link href="about" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>About</Nav.Link>
               {/* <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills-In</Nav.Link> */}
-              <Nav.Link href="home" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Posts-In</Nav.Link>
+              <Nav.Link href="home" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Community-In</Nav.Link>
               <Nav.Link href="https://www.youtube.com/watch?v=Dbv79prOMEk&list=PLAeu18HndGgBR-QLw8b8Wzp0gLiVfCS7n" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Improve Dutch</Nav.Link>
               <Nav.Link href="https://matrixmaster.info/" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Improve FullStack</Nav.Link>
 

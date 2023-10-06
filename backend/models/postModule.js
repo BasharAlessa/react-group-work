@@ -6,7 +6,7 @@ const postSchema = new Schema ({
     body:{
         type:String,
         required:true,
-        maxlength :40
+        maxlength :1000
     },
     UserId:{
         type:mongoose.Types.ObjectId,

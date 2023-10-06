@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 import axios from "axios";
+import moment from "moment";
 
 export const Newsletter = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState('');
@@ -46,13 +47,13 @@ export const Newsletter = ({ status, message, onValidated }) => {
   { posts?.length>0  ? 
    posts?.map(post => 
       <div class="post-form">
-        <h4> 👦_ {post.UserId.Name}</h4>
+        <h4 class="post-name-user"> 👦_ {post.UserId.Name}</h4>
         <div>
-        <h4>{post.body}</h4>
-        <h4 class="timing">{post.create_at}</h4 >
+        <h4 class="post-body-user">{post.body}</h4>
+        {/* <h6 class="post-date">{moment(posts.create_at).format('MMMM Do YYYY, h:mm:ss ')}</h6> */}
 
         </div>
-        <a href={`/post/${post._id}`}> Are you In? 🤗</a>
+        <a class="post-btn"href={`/post/${post._id}`}> Are you In? </a>
       </div>
    )
    : <h4> no posts for today</h4>
