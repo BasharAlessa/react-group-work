@@ -19,7 +19,7 @@ export const JasemFooter = () => {
               <a href="#"><img src={navIcon2} alt="Icon" /></a>
               <a href="#"><img src={navIcon3} alt="Icon" /></a>
             </div>
-            <p>Copyright 2023.Matrex Matser All Rights Reserved</p>
+            <p>Copyright 	&copy; 2023.Matrex Matser All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
