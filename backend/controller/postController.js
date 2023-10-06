@@ -22,6 +22,7 @@ const homePage =(req,res)=>{
 
 
 const creatPost = (req,res)=>{
+    console.log(req.body)
     jwt.verify(req.cookies.jwt ,'this is a random text for jwt sign' , function (err , decodedUser){
         if (err){
             console.log('issue with verify token',err)
@@ -73,9 +74,23 @@ const postDisplay = (req,res)=>{
     })
 }
 
+const postDelete = (req,res)=>{
+    const id = req.params.id;
+    postModel.findByIdAndDelete(id)
+     .then(()=>{                  
+        // res.redirect('http://localhost:3000/home')
+        res.json({redirect:'http://localhost:3000/home'})
+     })
+
+     .catch(err => {
+        console.log(err)
+     })
+}
+
 module.exports={
     homePage,
     creatPost,
-    postDisplay
+    postDisplay,
+    postDelete
     
 }

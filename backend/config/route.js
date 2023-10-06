@@ -19,5 +19,7 @@ route.post("/addPost", postController.creatPost)
 route.post("/addComment/:id", commentController.creatComment)
 route.post("/signup-company-new", comapnyController.signupCompnay)
 
+route.delete("/delete/:id",postController.postDelete )
+
 
 module.exports= route

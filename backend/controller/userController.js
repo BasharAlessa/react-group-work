@@ -13,7 +13,7 @@ const signupUser =(req,res)=>{
     const newUser = new Users(userObj)
     newUser.save()
     .then (()=>{
-        res.redirect('http://localhost:3000/home')
+        res.redirect('http://localhost:3000/')
     })
     .catch(err =>{
         console.log(err)
@@ -23,7 +23,6 @@ const signupUser =(req,res)=>{
 
  
 const logInUser = (req,res)=>{                      // for both users and companies
-    console.log(req.body)
     Users.findOne({Email:req.body.Email})
       .then(user => {
         if(user !== null){
@@ -37,8 +36,8 @@ const logInUser = (req,res)=>{                      // for both users and compan
                 }
                 let userToken=jwt.sign({tokenData},'this is a random text for jwt sign')
                 res.cookie('jwt', userToken)
-                // res.redirect('http://localhost:3000/home')
-                res.send({userToken,tokenData})
+                res.redirect('http://localhost:3000/home')
+                // res.send({userToken,tokenData})
             }
             else{
                 res.send({err: 'password is not correct'})
@@ -59,8 +58,8 @@ const logInUser = (req,res)=>{                      // for both users and compan
                         }
                         let companyToken=jwt.sign({tokenData},'this is a random text for jwt sign')
                         res.cookie('jwtc', companyToken)
-                        // res.redirect('http://localhost:3000/home')
-                        res.send({companyToken,tokenData})
+                        res.redirect('http://localhost:3000/home')
+                        // res.send({companyToken,tokenData})
                     }else{
                         res.send({err: 'password is not correct'})
                     }
@@ -84,42 +83,16 @@ const logout = (req,res)=>{                                    // for both users
     if(req.cookies.jwt ||req.cookies.jwtc ) { 
     res.clearCookie('jwt')
     res.clearCookie('jwtc')  
-    res.redirect('http://localhost:3000/home')}
+    res.redirect('http://localhost:3000/')}
     else {
-        res.redirect('/login')
+        res.redirect('http://localhost:3000/')
     }
 }
 
-// middleware
-const userAuth = (req ,res , next ) =>{
-    if(req.cookies.jwt){
-      jwt.verify(req.cookies.jwt ,'this is a random text for jwt sign' , function (err , decodedUser){
-          if (err){
-              console.log('issue with verify token',err)
-          } else {
-               res.locals.userId = decodedUser.tokenData.id
-               res.locals.userFulname = decodedUser.tokenData.Name
-               res.locals.userEmail = decodedUser.tokenData.Email
-          }  
-      } )           
-      next()
-    }else {
-      res.redirect('/login')
-    }
-}
 
-const logInAuth = (req ,res , next ) =>{
-    if(req.cookies.jwt){
-          res.redirect('/home')
-    }else {
-        next()
-    }
-  }
 
 module.exports = {
     signupUser,
     logInUser,
     logout,
-    userAuth,
-    logInAuth
 }
