@@ -38,7 +38,7 @@ useEffect(()=>{
         
          <form action={`http://localhost:3500/addComment/${params.id}`} method="post">
              <input class="login-form"type="text" name="body"/>
-             <button >Add Comment</button>
+             <button class="btn  btn-light">I'm In</button>
           </form>
        </div>
   } 

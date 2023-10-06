@@ -15,18 +15,11 @@ export function HomeTest (){
     return(
      <div>
 
-      <body class="body-about">
+      <body >
     
     
-    <div class="write-post">
-    {/* <h3>If you are <strong>IN</strong> start the journey In-Posting </h3>
+    <div >
 
-        <a href="/post/addnew">
-            <div class="In-Posting">
-                
-            </div>
-            <br></br>
-         <input type="text" class="form" placeholder="write your post in here" /> </a> */}
 
         <h3>If you are <strong>IN</strong> start the journey with</h3>
         
