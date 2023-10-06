@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken')
 
 
 const creatComment = (req,res)=>{
-    
+    console.log(req.body)
     jwt.verify(req.cookies.jwtc ,'this is a random text for jwt sign' , function (err , decodedcompany){
         if (err){
             console.log('issue with verify token',err)
@@ -16,7 +16,7 @@ const creatComment = (req,res)=>{
              res.companyId = decodedcompany.tokenData.id
         }  
     } ) 
-     console.log(req)
+     
     const comment = new commentmModel({
         body: req.body.comment,
         PostId:req.params.id,
@@ -35,6 +35,7 @@ const creatComment = (req,res)=>{
                     comp.save()
                     .then(()=>{
                         // res.redirect('/home')
+                        res.redirect('http://localhost:3000/home')
                     })
                     .catch((err)=>{
                         console.log(err)

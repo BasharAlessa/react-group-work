@@ -2,7 +2,6 @@ import './App.css';
 import {BrowserRouter , Routes , Route } from 'react-router-dom'
 import Home from './pages/home'
 import About from './pages/about'
-import AddNew from './pages/addNew'
 import Login from './pages/login'
 import SignUp from './pages/signup'
 import PostDisplay from './pages/post'
@@ -23,22 +22,16 @@ function App() {
     <div className="App">
      
      
-            <BrowserRouter>
+      <BrowserRouter>
      <div>
       <Routes>
-        
-        <Route path='/home' element = {<Home />} />
+        <Route path='/home' element = {!document.cookie ? <Login /> :<Home /> } />
         <Route path='/logout' element = {<Home />} />
         <Route path='/about' element = {<About />} />
-        <Route path='/post/addnew' element = {<AddNew />} />
         <Route path='/login' element = {!document.cookie ?  <Login /> :<Home /> }/>
         <Route path='/signup' element = {!document.cookie ?  <SignUp /> :<Home /> } />
         <Route path='/' element = {<AppReact />} />
         <Route path='/post/:id' element = {<PostDisplay />} />
-
-
-
-
       </Routes>
      </div>
      </BrowserRouter>
